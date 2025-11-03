@@ -1,0 +1,177 @@
+<?php
+/**
+ * SteepleStar LLC - Projects Page
+ * 
+ * Purpose: Showcase current and future digital products
+ * Project: Digital Assets Phase 4
+ * 
+ * DEPLOYMENT NOTE:
+ * When Zeitgeist Cloud goes live, change line 25:
+ * $zeitgeist_deployed = false;  →  $zeitgeist_deployed = true;
+ * This will make project links point to the live site.
+ * 
+ * This page uses shared-components from Zeitgeist Cloud:
+ * - config.php (environment detection)
+ * - head-icons.php (meta tags, favicons)
+ * - footer.php (footer with logo)
+ * - All 6 shared CSS files (including navbar.css for styling)
+ * 
+ * Plus SteepleStar-specific:
+ * - partials/navbar.php (navigation with SteepleStar links)
+ */
+
+// Load shared configuration
+require_once __DIR__ . '/../shared-components/base/config.php';
+
+// Define IS_LOCALHOST if not already defined by config.php
+if (!defined('IS_LOCALHOST')) {
+  define('IS_LOCALHOST', 
+    $_SERVER['SERVER_NAME'] === 'localhost' || 
+    $_SERVER['SERVER_ADDR'] === '127.0.0.1' ||
+    $_SERVER['SERVER_ADDR'] === '::1'
+  );
+}
+
+// Cross-project link: Zeitgeist Cloud
+// Set this to TRUE when Zeitgeist Cloud is deployed to production
+$zeitgeist_deployed = false;
+
+if (IS_LOCALHOST) {
+  $zeitgeist_url = 'http://localhost/WordCloudProject/';
+  $zeitgeist_available = true;
+} elseif ($zeitgeist_deployed) {
+  $zeitgeist_url = 'https://zeitgeist.cloud';
+  $zeitgeist_available = true;
+} else {
+  $zeitgeist_url = '#';
+  $zeitgeist_available = false;
+}
+
+// Page-specific meta information
+$page_title = 'Our Projects - SteepleStar Digital Products';
+$page_description = 'Explore SteepleStar\'s portfolio of privacy-focused digital products, including Zeitgeist Cloud word cloud platform and upcoming projects.';
+$page_url = canonical_url('projects.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Page Title & Description -->
+  <title><?php echo htmlspecialchars($page_title); ?></title>
+  <meta name="description" content="<?php echo htmlspecialchars($page_description); ?>">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="<?php echo htmlspecialchars($page_url); ?>">
+  
+  <!-- SteepleStar Head Icons & Meta Tags -->
+  <?php include __DIR__ . '/partials/head-icons.php'; ?>
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="<?php echo htmlspecialchars($page_title); ?>">
+  <meta property="og:description" content="<?php echo htmlspecialchars($page_description); ?>">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="<?php echo htmlspecialchars($page_url); ?>">
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="<?php echo htmlspecialchars($page_title); ?>">
+  <meta name="twitter:description" content="<?php echo htmlspecialchars($page_description); ?>">
+  
+  <!-- Shared Component CSS (in order) -->
+  <link rel="stylesheet" href="../shared-components/base/tokens.css">
+  <link rel="stylesheet" href="../shared-components/base/utilities.css">
+  <link rel="stylesheet" href="../shared-components/base/typography.css">
+  <link rel="stylesheet" href="../shared-components/base/containers.css">
+  <link rel="stylesheet" href="../shared-components/navbar/navbar.css">
+  <link rel="stylesheet" href="../shared-components/footer/footer.css">
+  
+  <!-- SteepleStar-Specific CSS -->
+  <link rel="stylesheet" href="css/steeplestar-tokens.css">
+  <link rel="stylesheet" href="css/steeplestar-style.css">
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "SteepleStar Projects",
+    "description": "Portfolio of privacy-focused digital products by SteepleStar LLC",
+    "url": "<?php echo htmlspecialchars($page_url); ?>",
+    "publisher": {
+      "@type": "Organization",
+      "name": "SteepleStar LLC"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    
+    <!-- SteepleStar Navigation Bar -->
+    <?php include __DIR__ . '/partials/navbar.php'; ?>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+      
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <h1>Our Projects</h1>
+        <p>Building digital products that respect users, one project at a time.</p>
+      </section>
+      
+      <!-- Introduction -->
+      <div class="text-content-panel section-spacing">
+        <h2>What We're Building</h2>
+        <p>Each SteepleStar project is designed with privacy, accessibility, and ethical monetization at its core. We're starting small, learning as we go, and proving that independent digital products can thrive without exploiting users.</p>
+        
+        <p>Here's what we've built so far, and what's on the horizon.</p>
+      </div>
+      
+      <!-- Projects Grid -->
+      <div class="projects-grid section-spacing">
+        
+        <!-- Project 1: Zeitgeist Cloud -->
+        <div class="project-card">
+          <span class="project-status">Live Now</span>
+          <h3>Zeitgeist Cloud</h3>
+          <p>A real-time community word cloud where users submit single words that grow larger as more people submit them. See what's on everyone's mind right now, visualized collectively.</p>
+          
+          <?php if ($zeitgeist_available): ?>
+            <a href="<?php echo htmlspecialchars($zeitgeist_url); ?>" class="project-link" target="_blank" rel="noopener noreferrer">Visit Zeitgeist Cloud →</a>
+          <?php else: ?>
+            <span class="project-link" style="opacity: 0.6; cursor: not-allowed; border-bottom-color: #999;">Coming Soon</span>
+          <?php endif; ?>
+        </div>
+        
+        <!-- Project 2: Future Project (Placeholder) -->
+        <div class="project-card">
+          <span class="project-status coming-soon">Coming Soon</span>
+          <h3>Project #2</h3>
+          <p>We're exploring ideas for our next digital product. Like Zeitgeist Cloud, it will prioritize user privacy, accessibility, and ethical design.</p>
+        </div>
+        
+        <!-- Project 3: Future Project (Placeholder) -->
+        <div class="project-card">
+          <span class="project-status coming-soon">Coming Soon</span>
+          <h3>Project #3</h3>
+          <p>More projects are on the way. We're taking our time to do things right—privacy-first, accessible, and sustainable.</p>
+        </div>
+        
+      </div>
+      
+      <!-- Back to Home -->
+      <div class="text-content-panel">
+        <p class="text-center"><a href="index.php">← Back to Home</a></p>
+      </div>
+      
+    </main>
+    
+    <!-- Shared Footer -->
+    <?php include __DIR__ . '/../shared-components/footer/footer.php'; ?>
+    
+  </div>
+</body>
+</html>

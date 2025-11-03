@@ -1,0 +1,78 @@
+/* ============================================
+   STEEPLESTAR TOKENS
+   Option A: Professional Independence
+   
+   PURPOSE: Adds SteepleStar-specific color
+   tokens without overriding shared component
+   tokens from tokens.css
+   
+   LOAD ORDER: After shared-components/base/tokens.css
+   ============================================ */
+
+:root {
+  /* ========================================
+     STEEPLESTAR BRAND COLORS (Option A)
+     ======================================== */
+  
+  /* Primary Brand Color - Deep Navy */
+  --ss-primary: #1A365D;
+  --ss-primary-hover: #1E3A5F;
+  
+  /* Accent Color - Bright Teal */
+  --ss-accent: #14B8A6;
+  --ss-accent-hover: #0F766E;
+  
+  /* Background Colors */
+  --ss-bg: #F3F4F6;           /* Soft Gray - page background */
+  --ss-panel-bg: #FFFFFF;     /* White - content panels */
+  
+  /* Text Colors */
+  --ss-text: #1F2937;         /* Charcoal - body text */
+  --ss-text-muted: #6B7280;   /* Gray - secondary text */
+  
+  /* Interactive Elements */
+  --ss-button-bg: var(--ss-accent);
+  --ss-button-hover: var(--ss-accent-hover);
+  --ss-button-text: #FFFFFF;
+  
+  --ss-link: var(--ss-accent);
+  --ss-link-hover: var(--ss-accent-hover);
+  
+  /* Borders & Dividers */
+  --ss-border: #E5E7EB;
+  --ss-border-dark: #D1D5DB;
+  
+  /* Status Colors */
+  --ss-success: #10B981;
+  --ss-warning: #F59E0B;
+  --ss-error: #EF4444;
+  
+  /* Shadows */
+  --ss-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ss-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --ss-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   NOTES FOR DEVELOPERS
+   ============================================
+   
+   IMPORTANT: This file ADDS tokens, it does
+   NOT override shared component tokens like:
+   - --ink (footer background)
+   - --light-text (footer text)
+   - --brand, --accent (Zeitgeist colors)
+   
+   All shared component tokens remain intact.
+   SteepleStar tokens use "ss-" prefix to
+   avoid conflicts.
+   
+   USE THESE TOKENS IN: steeplestar-style.css
+   
+   Example:
+   .hero {
+     background-color: var(--ss-primary);
+     color: var(--ss-panel-bg);
+   }
+   
+   ============================================ */

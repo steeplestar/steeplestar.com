@@ -1,0 +1,382 @@
+/* ============================================
+   STEEPLESTAR MAIN STYLESHEET
+   Styles specific to SteepleStar.com pages
+   
+   LOAD ORDER: After all shared-components CSS
+   and after steeplestar-tokens.css
+   ============================================ */
+
+/* ============================================
+   PAGE-LEVEL STYLES
+   ============================================ */
+
+body {
+  background-color: var(--ss-bg);
+  color: var(--ss-text);
+}
+
+/* Ensure main content area has proper background */
+main {
+  background-color: var(--ss-bg);
+}
+
+/* ============================================
+   CONTENT PANELS (Override shared styling)
+   ============================================ */
+
+.text-content-panel {
+  background-color: var(--ss-panel-bg);
+  border: 1px solid var(--ss-border);
+  box-shadow: var(--ss-shadow-md);
+}
+
+/* Typography inside panels - uses shared typography.css
+   but applies SteepleStar colors */
+.text-content-panel h1,
+.text-content-panel h2,
+.text-content-panel h3 {
+  color: var(--ss-primary);
+}
+
+.text-content-panel a {
+  color: var(--ss-link);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ss-accent);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.text-content-panel a:hover {
+  color: var(--ss-link-hover);
+  border-bottom-color: var(--ss-link-hover);
+}
+
+/* ============================================
+   HERO SECTION (Home Page)
+   ============================================ */
+
+.hero-section {
+  background-color: var(--ss-primary);
+  color: var(--ss-panel-bg);
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 2rem);
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.hero-section h1 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--ss-panel-bg);
+}
+
+.hero-section p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: var(--ss-panel-bg);
+  opacity: 0.95;
+}
+
+/* ============================================
+   BUTTONS & CALLS-TO-ACTION
+   ============================================ */
+
+.btn {
+  display: inline-block;
+  padding: clamp(0.625rem, 2vw, 0.875rem) clamp(1.25rem, 3vw, 2rem);
+  background-color: var(--ss-button-bg);
+  color: var(--ss-button-text);
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--ss-button-hover);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background-color: var(--ss-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--ss-primary-hover);
+}
+
+.btn-large {
+  padding: clamp(0.875rem, 2.5vw, 1.125rem) clamp(1.75rem, 4vw, 2.5rem);
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+}
+
+/* Center-aligned button container */
+.btn-container {
+  text-align: center;
+  margin: clamp(1.5rem, 3vw, 2rem) 0;
+}
+
+/* ============================================
+   PROJECT CARDS (Projects Page)
+   ============================================ */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1.5rem, 3vw, 2rem);
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+}
+
+.project-card {
+  background-color: var(--ss-panel-bg);
+  border: 1px solid var(--ss-border);
+  border-radius: var(--radius);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  box-shadow: var(--ss-shadow-md);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover {
+  box-shadow: var(--ss-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.project-card h3 {
+  color: var(--ss-primary);
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  margin-bottom: 0.75rem;
+}
+
+.project-card p {
+  color: var(--ss-text);
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.project-status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--ss-success);
+  color: white;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-status.coming-soon {
+  background-color: var(--ss-text-muted);
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--ss-link);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid var(--ss-accent);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-link:hover {
+  color: var(--ss-link-hover);
+  border-bottom-color: var(--ss-link-hover);
+}
+
+/* ============================================
+   SUPPORT PAGE SPECIFIC
+   ============================================ */
+
+.support-section {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.support-highlight {
+  background-color: #FEF3C7; /* Light yellow highlight */
+  border-left: 4px solid var(--ss-warning);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: var(--radius);
+}
+
+.support-highlight p {
+  margin: 0;
+  color: var(--ss-text);
+}
+
+.legal-disclaimer {
+  background-color: #FEE2E2; /* Light red background */
+  border: 2px solid var(--ss-error);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: var(--radius);
+}
+
+.legal-disclaimer h3 {
+  color: var(--ss-error);
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-disclaimer p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ss-text);
+  margin-bottom: 0.5rem;
+}
+
+.legal-disclaimer p:last-child {
+  margin-bottom: 0;
+}
+
+/* PayPal button container */
+.payment-container {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: var(--ss-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--ss-border);
+}
+
+/* ============================================
+   PRIVACY & TERMS PAGES
+   ============================================ */
+
+.legal-content h2 {
+  color: var(--ss-primary);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--ss-border);
+  padding-bottom: 0.5rem;
+}
+
+.legal-content h3 {
+  color: var(--ss-primary);
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-content ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.legal-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.last-updated {
+  color: var(--ss-text-muted);
+  font-size: 0.875rem;
+  font-style: italic;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ss-border);
+}
+
+/* ============================================
+   SECTION SPACING
+   ============================================ */
+
+.section-spacing {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.content-section {
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+
+/* Text alignment helpers */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* Margin helpers */
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS
+   ============================================ */
+
+/* Focus indicators for keyboard navigation */
+a:focus,
+button:focus,
+.btn:focus {
+  outline: 3px solid var(--ss-accent);
+  outline-offset: 2px;
+}
+
+/* Skip to main content (inherited from shared) */
+.skip-to-main:focus {
+  background-color: var(--ss-accent);
+  color: var(--ss-panel-bg);
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  body {
+    background-color: white;
+  }
+  
+  .hero-section {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
+  
+  .btn,
+  .payment-container {
+    display: none;
+  }
+}
+
+/* ============================================
+   NOTES FOR DEVELOPERS
+   ============================================
+   
+   This stylesheet:
+   - Uses tokens from steeplestar-tokens.css
+   - Builds on shared-components CSS
+   - Does NOT override navbar or footer styles
+   - Adds SteepleStar-specific components
+   - Maintains responsive design (240px - 4K)
+   - Follows WCAG AA accessibility standards
+   
+   ============================================ */
