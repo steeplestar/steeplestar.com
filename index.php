@@ -133,42 +133,37 @@ $page_url = canonical_url('index.php');
       <!-- Hero Section -->
       <section class="hero-section">
         <h1>Independent Digital Products, Built Right</h1>
-        <p>Creating tools that respect your privacy, your data, and your rights. No corporate overlords. No tracking everything you do. Just honest, ethical digital products.</p>
+        <p>Creating tools that respect your privacy, your data, and your rights. No tracking. No exploitation. Just honest digital products.</p>
       </section>
 
-      <!-- Who We Are Section -->
+      <!-- About Section -->
       <div class="text-content-panel section-spacing">
         <h2>Who We Are</h2>
-        <p>SteepleStar LLC is a one-person, independent operation based in Minnesota. We're not backed by venture capital, corporate media, or anyone else who might compromise our values. That means we can focus on what matters: building digital products that actually serve people, not advertisers.</p>
-
-        <p>We believe the internet can be better than it is today. It doesn't have to be a surveillance machine that tracks your every move and sells your data to the highest bidder. Digital products can be useful, respectful, and sustainable without resorting to invasive practices.</p>
+        <p>SteepleStar LLC is a small and fiercely independent operation. We're not backed by venture capital or corporate interests, which means we can focus on building digital products that serve people, not advertisers.</p>
+        
+        <p>We believe the internet can be better. Digital products can be useful and sustainable without invasive tracking or exploitative practices.</p>
       </div>
 
-      <!-- Our Approach Section -->
+      <!-- Principles Section -->
       <div class="text-content-panel section-spacing">
-        <h2>Our Approach</h2>
-        <p>Everything we build follows three core principles:</p>
-
+        <h2>How We Build</h2>
+        
         <h3>Privacy First</h3>
-        <p>We collect the bare minimum data needed to make our products work. No behavioral tracking. No selling your information. No building shadow profiles. Your data stays yours.</p>
+        <p>We collect only the minimum data needed to make our products work. No behavioral tracking, no selling information, no shadow profiles.</p>
 
         <h3>Transparent & Honest</h3>
-        <p>We're upfront about how we make money, what data we collect, and how our products work. No dark patterns. No hidden terms. No tricks.</p>
+        <p>We're upfront about how we make money, what data we collect, and how our products work. No dark patterns or hidden terms.</p>
 
         <h3>Ethically Monetized</h3>
-        <p>We believe creators deserve to be paid for their work, but not at the expense of user privacy or dignity. Our monetization strategies are straightforward and don't involve exploiting users.</p>
+        <p>Creators deserve to be paid for their work, but not at the expense of user privacy. Our monetization is straightforward and respectful.</p>
       </div>
 
-      <!-- Current Projects Section -->
+      <!-- Zeitgeist Cloud Section -->
       <div class="text-content-panel section-spacing">
-        <h2>Our First Project</h2>
+        <h2>Zeitgeist Cloud</h2>
+        <p>Our first project is a real-time community word cloud. Users submit single words that grow larger as more people submit them, creating a collective visualization of what's on everyone's mind.</p>
 
-        <h3>Zeitgeist Cloud</h3>
-        <p>A real-time community word cloud where people submit single words that grow larger as more people submit them. It's a simple idea: see what's on everyone's mind right now, captured in one collective visualization.</p>
-
-        <p><strong>What makes it different:</strong> Minimal data collection (just the word, timestamp, and hashed IP for rate limiting), no user accounts required, accessible from the smallest phones to the largest monitors, and built with actual respect for users.</p>
-
-        <p>Zeitgeist Cloud is live now, and it's just the beginning. We have more ideas, more products, and more ways to show that ethical digital development is possible.</p>
+        <p><strong>What makes it different:</strong> Minimal data collection, no user accounts required, fully accessible, and built with respect for users.</p>
 
         <div class="btn-container">
           <?php if ($zeitgeist_available): ?>
@@ -177,28 +172,6 @@ $page_url = canonical_url('index.php');
             <span class="btn-zeitgeist" style="opacity: 0.6; cursor: not-allowed;" aria-disabled="true" title="Coming Soon">Zeitgeist Cloud (Coming Soon)</span>
           <?php endif; ?>
         </div>
-      </div>
-
-      <!-- Why This Matters Section -->
-      <div class="text-content-panel section-spacing">
-        <h2>Why This Matters</h2>
-        <p>Most of the internet is controlled by a handful of massive corporations whose business model is surveillance. They offer "free" services in exchange for harvesting every detail of your life to sell to advertisers. That's not an inevitable feature of the internet—it's a choice.</p>
-
-        <p>We're making a different choice. Small, independent creators can build sustainable digital products without resorting to invasive tracking or exploitative practices. It's harder, sure, but it's possible. And we're proving it.</p>
-
-        <p>If you believe the internet should respect users instead of exploiting them, we'd love your support.</p>
-
-        <div class="btn-container">
-          <a href="support.php" class="btn btn-primary btn-large">Support Our Work</a>
-        </div>
-      </div>
-
-      <!-- Future Section -->
-      <div class="text-content-panel section-spacing">
-        <h2>What's Next</h2>
-        <p>Zeitgeist Cloud is our first project, but not our last. We're exploring new ideas for digital products that put users first. Stay tuned—we're just getting started.</p>
-
-        <p>Interested in seeing what we're building? Check out our <a href="projects.php">projects page</a> to see what's live and what's coming soon.</p>
       </div>
 
     </main>

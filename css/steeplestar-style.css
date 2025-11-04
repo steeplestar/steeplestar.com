@@ -73,6 +73,17 @@ main {
   border-bottom: none;
 }
 
+/* Navigation links (Back to Home, etc.) - match heading color */
+.text-content-panel .text-center a {
+  color: var(--ss-primary); /* Deep Navy - matches headings */
+  border-bottom-color: var(--ss-primary);
+}
+
+.text-content-panel .text-center a:hover {
+  color: var(--ss-primary-hover);
+  border-bottom-color: var(--ss-primary-hover);
+}
+
 /* ============================================
    HERO SECTION (Home Page)
    ============================================ */

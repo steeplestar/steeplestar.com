@@ -87,36 +87,26 @@ $page_url = canonical_url('support.php');
       <!-- Hero Section -->
       <section class="hero-section">
         <h1>Support Independent Development</h1>
-        <p>Help keep SteepleStar projects running without intrusive tracking or exploitative practices.</p>
+        <p>Help keep privacy-respecting digital products online and growing.</p>
       </section>
       
-      <!-- Support Section -->
+      <!-- Main Support Section -->
       <div class="text-content-panel support-section section-spacing">
-        <h2>Why Support Matters</h2>
-        <p>SteepleStar LLC is an independent, one-person operation creating digital products that respect your privacy and data. Unlike corporate-backed platforms, I rely on community support to keep projects running without intrusive advertising or data harvesting.</p>
+        <h2>Why Support</h2>
+        <p>SteepleStar is a one-person operation building digital products without surveillance or exploitation. Financial support helps cover hosting, domains, and development time while maintaining independence from corporate interests.</p>
         
-        <p>Most of the internet is funded by surveillance—tracking everything you do and selling that information to advertisers. I'm proving there's another way: building useful tools that don't exploit users. But that only works if people who value privacy-respecting products are willing to chip in.</p>
-      </div>
-      
-      <!-- What Support Enables -->
-      <div class="text-content-panel support-section section-spacing">
-        <h2>What Your Support Enables</h2>
-        <p>Every dollar contributed goes directly toward:</p>
+        <p>Contributions go toward:</p>
         <ul>
-          <li><strong>Server hosting and infrastructure</strong> - Keeping projects online and accessible</li>
-          <li><strong>Domain registration</strong> - Maintaining SteepleStar.com and project domains</li>
-          <li><strong>Development time</strong> - Building new features and fixing bugs</li>
-          <li><strong>New projects</strong> - Creating additional privacy-focused digital products</li>
-          <li><strong>Maintaining independence</strong> - No need to seek venture capital or corporate backing</li>
+          <li><strong>Infrastructure</strong> - Hosting, domains, and services</li>
+          <li><strong>Development</strong> - Time spent building and maintaining projects</li>
+          <li><strong>Growth</strong> - Creating new privacy-focused products</li>
         </ul>
-        
-        <p>There are no tiers, no perks, no rewards. Just honest financial support for independent work.</p>
       </div>
       
-      <!-- PayPal Donation Section -->
+      <!-- PayPal Section -->
       <div class="text-content-panel support-section section-spacing">
-        <h2>How to Support</h2>
-        <p>Contributions are accepted via PayPal. Any amount helps, and there are no obligations—this is purely voluntary support.</p>
+        <h2>How to Contribute</h2>
+        <p>Contributions are accepted via PayPal. Any amount is appreciated, and there are no obligations or rewards.</p>
         
         <!-- PayPal Button Container -->
         <div class="payment-container">
@@ -153,59 +143,20 @@ $page_url = canonical_url('support.php');
         </div>
       </div>
       
-      <!-- Legal Disclaimer (CRITICAL) -->
+      <!-- Legal Disclaimer -->
       <div class="text-content-panel support-section section-spacing">
         <div class="legal-disclaimer">
-          <h3>Important Legal Notice</h3>
+          <h3>Legal Notice</h3>
           <p><strong>SteepleStar LLC is a for-profit company.</strong> Contributions are voluntary, non-refundable, and <strong>not tax-deductible</strong>.</p>
           
-          <p><strong>No goods, services, equity, or rewards are provided in exchange for contributions.</strong> You are under no obligation to contribute, and contributions create no legal obligations for SteepleStar LLC beyond standard transaction processing.</p>
-          
-          <p>By contributing, you acknowledge that you understand these terms and are making a voluntary financial contribution to support independent digital product development.</p>
-          
-          <p><strong>This is not an investment.</strong> You receive no ownership stake, no financial returns, and no promises of any kind beyond a sincere thank you for supporting independent development.</p>
+          <p>No goods, services, equity, or rewards are provided. Contributions create no legal obligations beyond standard transaction processing. This is not an investment.</p>
         </div>
       </div>
       
-      <!-- Transparency Section -->
-      <div class="text-content-panel support-section section-spacing">
-        <h2>Transparency & Honesty</h2>
-        <p>100% of contributions go toward SteepleStar operations. Here's what that means in practice:</p>
-        
-        <h3>Server & Infrastructure Costs</h3>
-        <p>Domain registration, web hosting, database services, and CDN costs to keep projects online and fast.</p>
-        
-        <h3>Development Time</h3>
-        <p>Time spent building features, fixing bugs, responding to issues, and maintaining projects. This is a one-person operation, and development time is the biggest "cost" in terms of opportunity.</p>
-        
-        <h3>Future Projects</h3>
-        <p>Any surplus goes toward creating new digital products with the same privacy-first, user-respecting philosophy.</p>
-        
-        <h3>What Doesn't Happen</h3>
-        <p>Your contribution doesn't fund surveillance tools, data harvesting infrastructure, or advertising platforms. It doesn't go to investors or venture capital returns. It simply supports the work of building better digital products.</p>
-      </div>
-      
-      <!-- Alternatives Section -->
+      <!-- Other Ways to Help -->
       <div class="text-content-panel support-section section-spacing">
         <h2>Other Ways to Help</h2>
-        <p>Financial support isn't the only way to help SteepleStar projects succeed:</p>
-        
-        <ul>
-          <li><strong>Use the products</strong> - Every user matters, especially for word cloud projects that need participation</li>
-          <li><strong>Share with others</strong> - Tell people about privacy-respecting alternatives</li>
-          <li><strong>Provide feedback</strong> - Report bugs, suggest features, or share your experience</li>
-          <li><strong>Spread the word</strong> - Help others discover that ethical digital products exist</li>
-        </ul>
-        
-        <p>Whatever you can contribute—whether financial or not—it makes a difference.</p>
-      </div>
-      
-      <!-- Thank You Section -->
-      <div class="text-content-panel support-section">
-        <h2>Thank You</h2>
-        <p>Whether you choose to contribute financially or simply use and share SteepleStar projects, thank you for believing that the internet can be better than it is today. Every person who values privacy, transparency, and ethical development helps prove that another way is possible.</p>
-        
-        <p>I'm committed to building digital products that respect users. Your support—in whatever form—makes that possible.</p>
+        <p>Not interested in financial support? You can help by using the products, sharing them with others, or providing feedback.</p>
       </div>
       
       <!-- Back to Home -->
