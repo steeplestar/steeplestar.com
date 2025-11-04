@@ -140,9 +140,9 @@ $page_url = canonical_url('projects.php');
           <p>A real-time community word cloud where users submit single words that grow larger as more people submit them. See what's on everyone's mind right now, visualized collectively.</p>
           
           <?php if ($zeitgeist_available): ?>
-            <a href="<?php echo htmlspecialchars($zeitgeist_url); ?>" class="project-link" target="_blank" rel="noopener noreferrer">Visit Zeitgeist Cloud →</a>
+            <a href="<?php echo htmlspecialchars($zeitgeist_url); ?>" class="btn-zeitgeist" target="_blank" rel="noopener noreferrer" style="margin-top: 1rem;">Visit Zeitgeist Cloud</a>
           <?php else: ?>
-            <span class="project-link" style="opacity: 0.6; cursor: not-allowed; border-bottom-color: #999;">Coming Soon</span>
+            <span class="btn-zeitgeist" style="opacity: 0.6; cursor: not-allowed; margin-top: 1rem;" aria-disabled="true" title="Coming Soon">Zeitgeist Cloud (Coming Soon)</span>
           <?php endif; ?>
         </div>
         

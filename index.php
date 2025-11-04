@@ -172,9 +172,9 @@ $page_url = canonical_url('index.php');
 
         <div class="btn-container">
           <?php if ($zeitgeist_available): ?>
-            <a href="<?php echo htmlspecialchars($zeitgeist_url); ?>" class="btn btn-large" target="_blank" rel="noopener noreferrer">Visit Zeitgeist Cloud</a>
+            <a href="<?php echo htmlspecialchars($zeitgeist_url); ?>" class="btn-zeitgeist" target="_blank" rel="noopener noreferrer">Visit Zeitgeist Cloud</a>
           <?php else: ?>
-            <span class="btn btn-large" style="opacity: 0.6; cursor: not-allowed;" aria-disabled="true" title="Coming Soon">Zeitgeist Cloud (Coming Soon)</span>
+            <span class="btn-zeitgeist" style="opacity: 0.6; cursor: not-allowed;" aria-disabled="true" title="Coming Soon">Zeitgeist Cloud (Coming Soon)</span>
           <?php endif; ?>
         </div>
       </div>

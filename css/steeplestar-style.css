@@ -56,6 +56,23 @@ main {
   border-bottom-color: var(--ss-link-hover);
 }
 
+/* Buttons inside panels - higher specificity than .text-content-panel a */
+.text-content-panel a.btn,
+.text-content-panel a.btn-primary,
+.text-content-panel a.btn-large,
+.text-content-panel a.btn-zeitgeist {
+  color: #FFFFFF; /* White text on buttons */
+  border-bottom: none; /* Remove link underline style */
+}
+
+.text-content-panel a.btn:hover,
+.text-content-panel a.btn-primary:hover,
+.text-content-panel a.btn-large:hover,
+.text-content-panel a.btn-zeitgeist:hover {
+  color: #FFFFFF; /* Keep white text on hover */
+  border-bottom: none;
+}
+
 /* ============================================
    HERO SECTION (Home Page)
    ============================================ */
@@ -86,13 +103,14 @@ main {
 
 /* ============================================
    BUTTONS & CALLS-TO-ACTION
+   Unified style: Header navy background, white text, bright blue hover
    ============================================ */
 
 .btn {
   display: inline-block;
   padding: clamp(0.625rem, 2vw, 0.875rem) clamp(1.25rem, 3vw, 2rem);
-  background-color: var(--ss-button-bg);
-  color: var(--ss-button-text);
+  background-color: var(--ss-primary); /* Deep Navy - matches header */
+  color: #FFFFFF; /* White text */
   text-decoration: none;
   border-radius: var(--radius);
   font-weight: 600;
@@ -104,7 +122,8 @@ main {
 }
 
 .btn:hover {
-  background-color: var(--ss-button-hover);
+  background-color: #00A9FF; /* Bright blue hover */
+  color: #FFFFFF; /* Keep white text on hover */
   transform: translateY(-1px);
 }
 
@@ -113,16 +132,57 @@ main {
 }
 
 .btn-primary {
-  background-color: var(--ss-primary);
+  background-color: var(--ss-primary); /* Deep Navy */
+  color: #FFFFFF; /* White text */
 }
 
 .btn-primary:hover {
-  background-color: var(--ss-primary-hover);
+  background-color: #00A9FF; /* Bright blue hover */
+  color: #FFFFFF; /* Keep white text on hover */
 }
 
 .btn-large {
   padding: clamp(0.875rem, 2.5vw, 1.125rem) clamp(1.75rem, 4vw, 2.5rem);
   font-size: clamp(1rem, 2.5vw, 1.125rem);
+}
+
+/* Enhanced large button with Summon-style proportions */
+.btn-zeitgeist {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(52px, 8vmin, 72px);
+  padding: 0 clamp(2rem, 5vmin, 4rem);
+  min-width: clamp(200px, 30vw, 350px);
+  max-width: clamp(280px, 60vw, 400px);
+  
+  /* Unified SteepleStar button styling */
+  background-color: var(--ss-primary); /* Deep Navy - matches header */
+  color: #FFFFFF; /* White text */
+  border: 2px solid #FFFFFF; /* White border */
+  border-radius: clamp(8px, 1.5vmin, 16px);
+  box-shadow: 0 0 clamp(4px, 1vmin, 12px) rgba(0,0,0,.3);
+  
+  /* Typography */
+  font-weight: 600;
+  font-size: clamp(1rem, 2.2vmin, 1.3rem);
+  text-decoration: none;
+  white-space: nowrap;
+  
+  /* Smooth transitions */
+  transform: scale(1);
+  transition: all 0.2s ease;
+}
+
+.btn-zeitgeist:hover {
+  background-color: #00A9FF; /* Bright blue hover */
+  color: #FFFFFF; /* Keep white text on hover */
+  transform: scale(1.05);
+  box-shadow: 0 0 clamp(8px, 2vmin, 20px) rgba(0,0,0,.4);
+}
+
+.btn-zeitgeist:active {
+  transform: scale(1.02);
 }
 
 /* Center-aligned button container */
@@ -188,16 +248,19 @@ main {
 .project-link {
   display: inline-block;
   margin-top: 1rem;
-  color: var(--ss-link);
+  padding: clamp(0.625rem, 2vw, 0.875rem) clamp(1.25rem, 3vw, 2rem);
+  background-color: var(--ss-primary); /* Deep Navy - matches header */
+  color: #FFFFFF; /* White text */
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 2px solid var(--ss-accent);
-  transition: color 0.2s ease, border-color 0.2s ease;
+  border-radius: var(--radius);
+  border: 2px solid #FFFFFF; /* White border */
+  transition: all 0.2s ease;
 }
 
 .project-link:hover {
-  color: var(--ss-link-hover);
-  border-bottom-color: var(--ss-link-hover);
+  background-color: #00A9FF; /* Bright blue hover */
+  transform: translateY(-1px);
 }
 
 /* ============================================
@@ -366,7 +429,7 @@ button:focus,
     background-color: white;
     color: black;
     border: 2px solid black;
-  }
+  }  
   
   .btn,
   .payment-container {
