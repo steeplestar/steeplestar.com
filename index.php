@@ -139,39 +139,12 @@ $page_url = canonical_url('index.php');
       <!-- About Section -->
       <div class="text-content-panel section-spacing">
         <h2>Who We Are</h2>
-        <p>SteepleStar LLC is a small and fiercely independent operation. We're not backed by venture capital or corporate interests, which means we can focus on building digital products that serve people, not advertisers.</p>
+        <p>SteepleStar LLC is a small, independent operation. We're not part of any media giant or corporation. We build meaningful digital products that respect our users.</p>
         
-        <p>We believe the internet can be better. Digital products can be useful and sustainable without invasive tracking or exploitative practices.</p>
-      </div>
-
-      <!-- Principles Section -->
-      <div class="text-content-panel section-spacing">
-        <h2>How We Build</h2>
+        <h2>Our Story</h2>
+        <p>We built SteepleStar in 2025 because we remember an internet that used to be cool. These days, the internet is heavy on data collection, clickbait, misleading content, aggressive ads, and divisive algorithms.</p>
         
-        <h3>Privacy First</h3>
-        <p>We collect only the minimum data needed to make our products work. No behavioral tracking, no selling information, no shadow profiles.</p>
-
-        <h3>Transparent & Honest</h3>
-        <p>We're upfront about how we make money, what data we collect, and how our products work. No dark patterns or hidden terms.</p>
-
-        <h3>Ethically Monetized</h3>
-        <p>Creators deserve to be paid for their work, but not at the expense of user privacy. Our monetization is straightforward and respectful.</p>
-      </div>
-
-      <!-- Zeitgeist Cloud Section -->
-      <div class="text-content-panel section-spacing">
-        <h2>Zeitgeist Cloud</h2>
-        <p>Our first project is a real-time community word cloud. Users submit single words that grow larger as more people submit them, creating a collective visualization of what's on everyone's mind.</p>
-
-        <p><strong>What makes it different:</strong> Minimal data collection, no user accounts required, fully accessible, and built with respect for users.</p>
-
-        <div class="btn-container">
-          <?php if ($zeitgeist_available): ?>
-            <a href="<?php echo htmlspecialchars($zeitgeist_url); ?>" class="btn-zeitgeist" target="_blank" rel="noopener noreferrer">Visit Zeitgeist Cloud</a>
-          <?php else: ?>
-            <span class="btn-zeitgeist" style="opacity: 0.6; cursor: not-allowed;" aria-disabled="true" title="Coming Soon">Zeitgeist Cloud (Coming Soon)</span>
-          <?php endif; ?>
-        </div>
+        <p>We're different and we're ready to earn user trust, one project at a time. Our first is <a href="<?php echo htmlspecialchars($zeitgeist_url); ?>" class="inline-nav" target="_blank" rel="noopener noreferrer">Zeitgeist Cloud</a>, a real-time shared digital experience. We bring our values to everything we build, and we stand behind every project.</p>
       </div>
 
     </main>

@@ -36,6 +36,15 @@ main {
   box-shadow: var(--ss-shadow-md);
 }
 
+/* Increase paragraph spacing for better readability */
+.text-content-panel p {
+  margin-bottom: 1.5rem;
+}
+
+.text-content-panel p:last-child {
+  margin-bottom: 0;
+}
+
 /* Typography inside panels - uses shared typography.css
    but applies SteepleStar colors */
 .text-content-panel h1,
@@ -80,6 +89,17 @@ main {
 }
 
 .text-content-panel .text-center a:hover {
+  color: var(--ss-primary-hover);
+  border-bottom-color: var(--ss-primary-hover);
+}
+
+/* Inline navigation links (project links, etc.) - same as centered nav links */
+.text-content-panel a.inline-nav {
+  color: var(--ss-primary); /* Deep Navy - matches headings */
+  border-bottom-color: var(--ss-primary);
+}
+
+.text-content-panel a.inline-nav:hover {
   color: var(--ss-primary-hover);
   border-bottom-color: var(--ss-primary-hover);
 }
