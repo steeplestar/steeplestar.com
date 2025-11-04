@@ -10,14 +10,20 @@
    PAGE-LEVEL STYLES
    ============================================ */
 
+/* Space Background - visible behind content panels */
 body {
-  background-color: var(--ss-bg);
+  background-image: url('../images/space-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #000; /* Fallback if image doesn't load */
   color: var(--ss-text);
 }
 
-/* Ensure main content area has proper background */
+/* Main content area - transparent so space shows through */
 main {
-  background-color: var(--ss-bg);
+  background-color: transparent;
 }
 
 /* ============================================
@@ -353,6 +359,7 @@ button:focus,
 @media print {
   body {
     background-color: white;
+    background-image: none;
   }
   
   .hero-section {
@@ -378,5 +385,7 @@ button:focus,
    - Adds SteepleStar-specific components
    - Maintains responsive design (240px - 4K)
    - Follows WCAG AA accessibility standards
+   
+   Space background visible behind white content panels
    
    ============================================ */
