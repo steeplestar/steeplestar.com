@@ -139,6 +139,10 @@ $page_url = canonical_url('projects.php');
           <h3>Zeitgeist Cloud</h3>
           <p>A real-time community word cloud where users submit single words that grow larger as more people submit them. See what's on everyone's mind right now, visualized collectively.</p>
           
+          <div class="project-image">
+            <img src="images/zeitgeist-preview.jpg" alt="Zeitgeist Cloud word cloud visualization" loading="lazy">
+          </div>
+          
           <?php if ($zeitgeist_available): ?>
             <a href="<?php echo htmlspecialchars($zeitgeist_url); ?>" class="btn-zeitgeist" target="_blank" rel="noopener noreferrer" style="margin-top: 1rem;">Visit Zeitgeist Cloud</a>
           <?php else: ?>
