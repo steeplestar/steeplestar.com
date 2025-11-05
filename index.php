@@ -132,19 +132,19 @@ $page_url = canonical_url('index.php');
 
       <!-- Hero Section -->
       <section class="hero-section">
-        <h1>Independent Digital Products, Built Right</h1>
-        <p>Creating tools that respect your privacy, your data, and your rights. No tracking. No exploitation. Just honest digital products.</p>
+        <h1>SteepleStar</h1>
+        <p>Building better digital products</p>
       </section>
 
       <!-- About Section -->
       <div class="text-content-panel section-spacing">
         <h2>Who We Are</h2>
-        <p>SteepleStar LLC is a small, independent operation. We're not part of any media giant or corporation. We build meaningful digital products that respect our users.</p>
+        <p>SteepleStar is not owned by any media giant or corporation. We're a small, independent operation building meaningful digital products that respect users.</p>
         
         <h2>Our Story</h2>
         <p>We built SteepleStar in 2025 because we remember an internet that used to be cool. These days, the internet is heavy on data collection, clickbait, misleading content, aggressive ads, and divisive algorithms.</p>
         
-        <p>We're different and we're ready to earn user trust, one project at a time. Our first is <a href="<?php echo htmlspecialchars($zeitgeist_url); ?>" class="inline-nav" target="_blank" rel="noopener noreferrer">Zeitgeist Cloud</a>, a real-time shared digital experience. We bring our values to everything we build, and we stand behind every project.</p>
+        <p>We believe in doing things differently, and we're ready to prove that, one project at a time. Our flagship and first is <a href="<?php echo htmlspecialchars($zeitgeist_url); ?>" class="inline-nav" target="_blank" rel="noopener noreferrer">Zeitgeist Cloud</a>, a real-time shared digital experience. We bring our values to everything we build, and we stand behind every one of our <a href="projects.php" class="inline-nav">projects</a>.</p>
       </div>
 
     </main>

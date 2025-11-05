@@ -31,8 +31,8 @@ if (!defined('IS_LOCALHOST')) {
 }
 
 // Page-specific meta information
-$page_title = 'Support Independent Development - SteepleStar LLC';
-$page_description = 'Support independent digital product development. Help keep SteepleStar projects running without intrusive tracking or exploitative practices.';
+$page_title = 'Support SteepleStar - Independent Digital Products';
+$page_description = 'Support independent digital product development. Help keep SteepleStar projects running.';
 $page_url = canonical_url('support.php');
 ?>
 <!DOCTYPE html>
@@ -86,27 +86,22 @@ $page_url = canonical_url('support.php');
       
       <!-- Hero Section -->
       <section class="hero-section">
-        <h1>Support Independent Development</h1>
-        <p>Help keep privacy-respecting digital products online and growing.</p>
+        <h1>Support SteepleStar</h1>
+        <p>Voluntary contributions show support for our work.</p>
       </section>
       
-      <!-- Main Support Section -->
+      <!-- Main Content Panel -->
       <div class="text-content-panel support-section section-spacing">
         <h2>Why Support</h2>
-        <p>SteepleStar is a one-person operation building digital products without surveillance or exploitation. Financial support helps cover hosting, domains, and development time while maintaining independence from corporate interests.</p>
+        <p>SteepleStar operates on a small scale. Servers, domains, bandwidth, and development all cost money. Financial contributions help offset expenses.</p>
         
-        <p>Contributions go toward:</p>
-        <ul>
-          <li><strong>Infrastructure</strong> - Hosting, domains, and services</li>
-          <li><strong>Development</strong> - Time spent building and maintaining projects</li>
-          <li><strong>Growth</strong> - Creating new privacy-focused products</li>
-        </ul>
+        <p>Your contribution matters.</p>
       </div>
       
-      <!-- PayPal Section -->
+      <!-- PayPal & Legal Section Combined -->
       <div class="text-content-panel support-section section-spacing">
         <h2>How to Contribute</h2>
-        <p>Contributions are accepted via PayPal. Any amount is appreciated, and there are no obligations or rewards.</p>
+        <p>Contribute any amount via PayPal. Financial support is welcome and appreciated.</p>
         
         <!-- PayPal Button Container -->
         <div class="payment-container">
@@ -141,22 +136,14 @@ $page_url = canonical_url('support.php');
           <p><strong>PayPal button will be installed here.</strong></p>
           <p style="font-size: 0.875rem; color: #6B7280;">See HTML comments in source code for installation instructions.</p>
         </div>
-      </div>
-      
-      <!-- Legal Disclaimer -->
-      <div class="text-content-panel support-section section-spacing">
+        
+        <!-- Legal Disclaimer -->
         <div class="legal-disclaimer">
           <h3>Legal Notice</h3>
           <p><strong>SteepleStar LLC is a for-profit company.</strong> Contributions are voluntary, non-refundable, and <strong>not tax-deductible</strong>.</p>
           
-          <p>No goods, services, equity, or rewards are provided. Contributions create no legal obligations beyond standard transaction processing. This is not an investment.</p>
+          <p>No goods, services, equity, or rewards are provided. This is not an investment.</p>
         </div>
-      </div>
-      
-      <!-- Other Ways to Help -->
-      <div class="text-content-panel support-section section-spacing">
-        <h2>Other Ways to Help</h2>
-        <p>Not interested in financial support? You can help by using the products, sharing them with others, or providing feedback.</p>
       </div>
       
       <!-- Back to Home -->

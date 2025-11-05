@@ -119,15 +119,12 @@ $page_url = canonical_url('projects.php');
       <!-- Hero Section -->
       <section class="hero-section">
         <h1>Our Projects</h1>
-        <p>Building digital products that respect users, one project at a time.</p>
+        <p>Here's what we're building.</p>
       </section>
       
       <!-- Introduction -->
       <div class="text-content-panel section-spacing">
-        <h2>What We're Building</h2>
-        <p>Each SteepleStar project is designed with privacy, accessibility, and ethical monetization at its core. We're starting small, learning as we go, and proving that independent digital products can thrive without exploiting users.</p>
-        
-        <p>Here's what we've built so far, and what's on the horizon.</p>
+        <p>We're just getting started. Explore what's live now, and check back to see what's next.</p>
       </div>
       
       <!-- Projects Grid -->
@@ -135,9 +132,9 @@ $page_url = canonical_url('projects.php');
         
         <!-- Project 1: Zeitgeist Cloud -->
         <div class="project-card">
-          <span class="project-status">Live Now</span>
+          <span class="project-status">Coming Soon</span>
           <h3>Zeitgeist Cloud</h3>
-          <p>A real-time community word cloud where users submit single words that grow larger as more people submit them. See what's on everyone's mind right now, visualized collectively.</p>
+          <p>A real-time community word cloud. Submit a word, watch it grow as others submit the same one. See what's on everyone's mind right now.</p>
           
           <div class="project-image">
             <img src="images/zeitgeist-preview.jpg" alt="Zeitgeist Cloud word cloud visualization" loading="lazy">
@@ -152,16 +149,16 @@ $page_url = canonical_url('projects.php');
         
         <!-- Project 2: Future Project (Placeholder) -->
         <div class="project-card">
-          <span class="project-status coming-soon">Coming Soon</span>
+          <span class="project-status coming-soon">Up Ahead</span>
           <h3>Project #2</h3>
-          <p>We're exploring ideas for our next digital product. Like Zeitgeist Cloud, it will prioritize user privacy, accessibility, and ethical design.</p>
+          <p>We're figuring out what's next. Stay tuned.</p>
         </div>
         
         <!-- Project 3: Future Project (Placeholder) -->
         <div class="project-card">
-          <span class="project-status coming-soon">Coming Soon</span>
+          <span class="project-status coming-soon">Up Ahead</span>
           <h3>Project #3</h3>
-          <p>More projects are on the way. We're taking our time to do things right—privacy-first, accessible, and sustainable.</p>
+          <p>More to come. We're taking our time to get it right.</p>
         </div>
         
       </div>
