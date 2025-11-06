@@ -428,6 +428,27 @@ main {
   margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
 }
 
+/* Payment buttons styling */
+.payment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.payment-option {
+  padding: 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  background: #F9FAFB;
+}
+
+.payment-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
 /* ============================================
    RESPONSIVE UTILITIES
    ============================================ */

@@ -103,46 +103,56 @@ $page_url = canonical_url('support.php');
         <h2>How to Contribute</h2>
         <p>Contribute any amount via PayPal. Financial support is welcome and appreciated.</p>
         
-        <!-- PayPal Button Container -->
-        <div class="payment-container">
-          <!-- 
-            ============================================
-            PAYPAL BUTTON INSTALLATION INSTRUCTIONS
-            ============================================
-            
-            To add your PayPal Donate button:
-            
-            1. Go to: https://www.paypal.com/donate/buttons
-            2. Log in to your PayPal Business account
-            3. Create a "Donate" button
-            4. Customize the button text if desired
-            5. Copy the generated HTML code
-            6. Paste it here, replacing this comment block
-            
-            The button code will look something like:
-            
-            <form action="https://www.paypal.com/donate" method="post" target="_top">
-              <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL">
-              <input type="hidden" name="no_recurring" value="0">
-              <input type="hidden" name="currency_code" value="USD">
-              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" 
-                     border="0" name="submit" title="PayPal - The safer, easier way to pay online!" 
-                     alt="Donate with PayPal button">
-            </form>
-            
-            ============================================
-          -->
-          
-          <p><strong>PayPal button will be installed here.</strong></p>
-          <p style="font-size: 0.875rem; color: #6B7280;">See HTML comments in source code for installation instructions.</p>
-        </div>
-        
         <!-- Legal Disclaimer -->
         <div class="legal-disclaimer">
           <h3>Legal Notice</h3>
           <p><strong>SteepleStar LLC is a for-profit company.</strong> Contributions are voluntary, non-refundable, and <strong>not tax-deductible</strong>.</p>
           
           <p>No goods, services, equity, or rewards are provided. This is not an investment.</p>
+        </div>
+        
+        <!-- PayPal Button Container -->
+        <div class="payment-container">
+          
+          <!-- $5 Contribution -->
+          <div class="payment-option">
+            <p class="payment-label">Contribute $5</p>
+            <div>
+              <style>.pp-5X5PATFW88T28{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+              <form action="https://www.paypal.com/ncp/payment/5X5PATFW88T28" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                <input class="pp-5X5PATFW88T28" type="submit" value="Pay Now" />
+                <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+                <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+              </form>
+            </div>
+          </div>
+          
+          <!-- $20 Contribution -->
+          <div class="payment-option">
+            <p class="payment-label">Contribute $20</p>
+            <div>
+              <style>.pp-ND94Q2ZTFDLJS{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+              <form action="https://www.paypal.com/ncp/payment/ND94Q2ZTFDLJS" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                <input class="pp-ND94Q2ZTFDLJS" type="submit" value="Pay Now" />
+                <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+                <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+              </form>
+            </div>
+          </div>
+          
+          <!-- $100 Contribution -->
+          <div class="payment-option">
+            <p class="payment-label">Contribute $100</p>
+            <div>
+              <style>.pp-K4CBWSEHU7J8C{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+              <form action="https://www.paypal.com/ncp/payment/K4CBWSEHU7J8C" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                <input class="pp-K4CBWSEHU7J8C" type="submit" value="Pay Now" />
+                <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+                <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+              </form>
+            </div>
+          </div>
+          
         </div>
       </div>
       
