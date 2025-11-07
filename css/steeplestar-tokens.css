@@ -18,9 +18,9 @@
   --ss-primary: #1A365D;
   --ss-primary-hover: #1E3A5F;
   
-  /* Accent Color - Bright Teal */
-  --ss-accent: #14B8A6;
-  --ss-accent-hover: #0F766E;
+  /* Accent Color - Navy Blue (matches header) */
+  --ss-accent: #1A365D;
+  --ss-accent-hover: #1E3A5F;
   
   /* Background Colors */
   --ss-bg: #F3F4F6;           /* Soft Gray - page background */
@@ -31,12 +31,12 @@
   --ss-text-muted: #6B7280;   /* Gray - secondary text */
   
   /* Interactive Elements */
-  --ss-button-bg: var(--ss-accent);
-  --ss-button-hover: var(--ss-accent-hover);
+  --ss-button-bg: var(--ss-primary);
+  --ss-button-hover: var(--ss-primary-hover);
   --ss-button-text: #FFFFFF;
   
-  --ss-link: var(--ss-accent);
-  --ss-link-hover: var(--ss-accent-hover);
+  --ss-link: var(--ss-primary);
+  --ss-link-hover: var(--ss-primary-hover);
   
   /* Borders & Dividers */
   --ss-border: #E5E7EB;

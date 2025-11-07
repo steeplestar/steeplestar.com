@@ -31,10 +31,10 @@ main {
    ============================================ */
 .text-content-panel {
   background-color: var(--ss-panel-bg);
-  border: 3px solid #14B8A6;  /* THICK TEAL BORDER - can't miss it! */
+  border: 3px solid var(--ss-primary);  /* Navy blue border - matches header */
   box-shadow: 
     0 16px 64px rgba(0, 0, 0, 0.4),
-    0 0 80px rgba(20, 184, 166, 0.5);  /* MASSIVE glow */
+    0 0 80px rgba(26, 54, 93, 0.5);  /* Navy glow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -42,7 +42,7 @@ main {
   transform: translateY(-8px);  /* BIG lift on hover */
   box-shadow: 
     0 24px 96px rgba(0, 0, 0, 0.5),
-    0 0 120px rgba(20, 184, 166, 0.8);  /* HUGE glow on hover */
+    0 0 120px rgba(26, 54, 93, 0.8);  /* Stronger navy glow on hover */
 }
 
 /* Increase paragraph spacing for better readability */
