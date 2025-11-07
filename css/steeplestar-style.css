@@ -31,18 +31,18 @@ main {
    ============================================ */
 .text-content-panel {
   background-color: var(--ss-panel-bg);
-  border: 3px solid var(--ss-primary);  /* Navy blue border - matches header */
+  border: 3px solid var(--ss-primary);
   box-shadow: 
     0 16px 64px rgba(0, 0, 0, 0.4),
-    0 0 80px rgba(26, 54, 93, 0.5);  /* Navy glow */
+    0 0 80px rgba(255, 255, 255, 0.6);  /* Bright white glow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .text-content-panel:hover {
-  transform: translateY(-8px);  /* BIG lift on hover */
+  transform: translateY(-8px);
   box-shadow: 
     0 24px 96px rgba(0, 0, 0, 0.5),
-    0 0 120px rgba(26, 54, 93, 0.8);  /* Stronger navy glow on hover */
+    0 0 120px rgba(255, 255, 255, 0.9);  /* Stronger white glow on hover */
 }
 
 /* Increase paragraph spacing for better readability */
@@ -118,22 +118,25 @@ main {
    ============================================ */
 
 .hero-section {
-  background-color: var(--ss-primary);
+  background-image: url('../images/header_image_night-sky-2211032_1920.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: var(--ss-primary); /* Fallback */
   color: var(--ss-panel-bg);
-  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 2rem);
+  padding: clamp(0.1rem, 0.5vw, 0.5rem) clamp(0.25rem, 0.5vw, 0.5rem);
   text-align: center;
   margin-bottom: clamp(6rem, 12vw, 9rem);
 }
 
 .hero-section h1 {
-  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);  /* Larger hero text */
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--ss-panel-bg);
 }
 
 .hero-section p {
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1.25rem, 3vw, 2rem);  /* Larger tagline */
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
