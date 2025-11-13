@@ -132,15 +132,18 @@ main {
   background-attachment: fixed;  /* SEAMLESS - locks background in place */
   background-color: var(--ss-primary); /* Fallback */
   color: var(--ss-panel-bg);
-  padding: clamp(0.1rem, 0.5vw, 0.5rem) clamp(0.25rem, 0.5vw, 0.5rem);
+  padding-top: clamp(2rem, 4vw, 4rem);  /* KEEP: Nice space above text */
+  padding-bottom: clamp(0.5rem, 1vw, 1rem);  /* REDUCED: Tighter bottom */
+  padding-left: clamp(1rem, 2vw, 2rem);  /* INCREASED: Better side margins */
+  padding-right: clamp(1rem, 2vw, 2rem);  /* INCREASED: Better side margins */
   text-align: center;
-  margin-bottom: clamp(6rem, 12vw, 9rem);
+  margin-bottom: clamp(4rem, 8vw, 6rem);  /* REDUCED: Compensates for top padding increase */
 }
 
 .hero-section h1 {
   font-size: clamp(2.5rem, 6vw, 5rem);  /* Larger hero text */
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;  /* REDUCED: Tighter spacing to tagline */
   color: var(--ss-panel-bg);
   /* ACCESSIBILITY: Text shadow ensures readability over bright stars */
   text-shadow: 
@@ -215,6 +218,8 @@ main {
   padding: 0 clamp(2rem, 5vmin, 4rem);
   min-width: clamp(200px, 30vw, 350px);
   max-width: clamp(280px, 60vw, 400px);
+  margin-left: auto;
+  margin-right: auto;
   
   /* Unified SteepleStar button styling */
   background-color: var(--ss-primary); /* Deep Navy - matches header */
@@ -245,22 +250,27 @@ main {
   transform: scale(1.02);
 }
 
-/* Center-aligned button container */
+/* Center-aligned button container - FIXED: Works with flex buttons */
 .btn-container {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin: clamp(1.5rem, 3vw, 2rem) 0;
 }
 
 /* ============================================
    PROJECT CARDS (Projects Page)
+   UPDATED: Always displays as single column for cleaner presentation
    ACCESSIBILITY FIX: Status badge colors updated
    ============================================ */
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  display: flex;
+  flex-direction: column;
   gap: clamp(1.5rem, 3vw, 2rem);
   margin-top: clamp(1.5rem, 3vw, 2rem);
+  max-width: 600px;  /* Constrain width on large screens */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project-card {
@@ -471,7 +481,8 @@ main {
   margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
 }
 
-/* Payment option styling */.payment-option {
+/* Payment option styling */
+.payment-option {
   padding: 1rem;
   border: 1px solid #E5E7EB;
   border-radius: 8px;
@@ -578,6 +589,12 @@ button:focus,
       - Body text: #78350F (darker brown)
       - Border: #F59E0B (orange)
       - All combinations pass WCAG AA
+   
+   5. Project Cards Layout
+      - Changed to single column display (flex-direction: column)
+      - Max-width: 600px to prevent cards from getting too wide
+      - Centered with margin: auto
+      - Clean, focused presentation on all screen sizes
    
    This stylesheet:
    - Uses tokens from steeplestar-tokens.css
