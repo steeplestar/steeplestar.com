@@ -73,6 +73,57 @@ $page_url = canonical_url('support.php');
   <!-- SteepleStar-Specific CSS -->
   <link rel="stylesheet" href="css/steeplestar-tokens.css">
   <link rel="stylesheet" href="css/steeplestar-style.css">
+  
+  <!-- PayPal Button Styles (moved from body for HTML5 validation) -->
+  <style>
+    .pp-5X5PATFW88T28 {
+      text-align: center;
+      border: none;
+      border-radius: 0.25rem;
+      min-width: 11.625rem;
+      padding: 0 2rem;
+      height: 2.625rem;
+      font-weight: bold;
+      background-color: #FFD140;
+      color: #000000;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      cursor: pointer;
+    }
+    
+    .pp-ND94Q2ZTFDLJS {
+      text-align: center;
+      border: none;
+      border-radius: 0.25rem;
+      min-width: 11.625rem;
+      padding: 0 2rem;
+      height: 2.625rem;
+      font-weight: bold;
+      background-color: #FFD140;
+      color: #000000;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      cursor: pointer;
+    }
+    
+    .pp-K4CBWSEHU7J8C {
+      text-align: center;
+      border: none;
+      border-radius: 0.25rem;
+      min-width: 11.625rem;
+      padding: 0 2rem;
+      height: 2.625rem;
+      font-weight: bold;
+      background-color: #FFD140;
+      color: #000000;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
@@ -112,17 +163,17 @@ $page_url = canonical_url('support.php');
         </div>
         
         <!-- PayPal Button Container -->
+        <!-- VALIDATION FIXES: Styles moved to head, quotes added, trailing slashes removed, section changed to div -->
         <div class="payment-container">
           
           <!-- $5 Contribution -->
           <div class="payment-option">
             <p class="payment-label">Contribute $5</p>
             <div>
-              <style>.pp-5X5PATFW88T28{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
               <form action="https://www.paypal.com/ncp/payment/5X5PATFW88T28" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input class="pp-5X5PATFW88T28" type="submit" value="Pay Now" />
-                <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
-                <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+                <input class="pp-5X5PATFW88T28" type="submit" value="Pay Now">
+                <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards">
+                <div style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"></div>
               </form>
             </div>
           </div>
@@ -131,11 +182,10 @@ $page_url = canonical_url('support.php');
           <div class="payment-option">
             <p class="payment-label">Contribute $20</p>
             <div>
-              <style>.pp-ND94Q2ZTFDLJS{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
               <form action="https://www.paypal.com/ncp/payment/ND94Q2ZTFDLJS" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input class="pp-ND94Q2ZTFDLJS" type="submit" value="Pay Now" />
-                <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
-                <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+                <input class="pp-ND94Q2ZTFDLJS" type="submit" value="Pay Now">
+                <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards">
+                <div style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"></div>
               </form>
             </div>
           </div>
@@ -144,11 +194,10 @@ $page_url = canonical_url('support.php');
           <div class="payment-option">
             <p class="payment-label">Contribute $100</p>
             <div>
-              <style>.pp-K4CBWSEHU7J8C{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
               <form action="https://www.paypal.com/ncp/payment/K4CBWSEHU7J8C" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-                <input class="pp-K4CBWSEHU7J8C" type="submit" value="Pay Now" />
-                <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
-                <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+                <input class="pp-K4CBWSEHU7J8C" type="submit" value="Pay Now">
+                <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards">
+                <div style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"></div>
               </form>
             </div>
           </div>

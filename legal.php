@@ -27,16 +27,16 @@ $page_url = canonical_url('legal.php');
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?php echo htmlspecialchars($page_title); ?></title>
-  <meta name="description" content="<?php echo htmlspecialchars($page_description); ?>" />
+  <meta name="description" content="<?php echo htmlspecialchars($page_description); ?>">
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="<?php echo htmlspecialchars($page_url); ?>" />
+  <link rel="canonical" href="<?php echo htmlspecialchars($page_url); ?>">
 
   <!-- Do not index or preview this page -->
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="robots" content="noindex, nofollow">
 
   <!-- SteepleStar Head Icons & Meta Tags -->
   <?php include __DIR__ . '/partials/head-icons.php'; ?>

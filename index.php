@@ -64,41 +64,41 @@ $page_url = canonical_url('index.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
   <!-- Page Title & Description -->
   <title><?php echo htmlspecialchars($page_title); ?></title>
-  <meta name="description" content="<?php echo htmlspecialchars($page_description); ?>" />
+  <meta name="description" content="<?php echo htmlspecialchars($page_description); ?>" >
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="<?php echo htmlspecialchars($page_url); ?>" />
+  <link rel="canonical" href="<?php echo htmlspecialchars($page_url); ?>" >
 
   <!-- SteepleStar Head Icons & Meta Tags (favicons, mask icon, theme-color, etc.) -->
   <?php include __DIR__ . '/partials/head-icons.php'; ?>
 
   <!-- Open Graph Tags -->
-  <meta property="og:title" content="<?php echo htmlspecialchars($page_title); ?>" />
-  <meta property="og:description" content="<?php echo htmlspecialchars($page_description); ?>" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="<?php echo htmlspecialchars($page_url); ?>" />
+  <meta property="og:title" content="<?php echo htmlspecialchars($page_title); ?>" >
+  <meta property="og:description" content="<?php echo htmlspecialchars($page_description); ?>" >
+  <meta property="og:type" content="website" >
+  <meta property="og:url" content="<?php echo htmlspecialchars($page_url); ?>" >
 
   <!-- Twitter Card Tags -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="<?php echo htmlspecialchars($page_title); ?>" />
-  <meta name="twitter:description" content="<?php echo htmlspecialchars($page_description); ?>" />
+  <meta name="twitter:card" content="summary" >
+  <meta name="twitter:title" content="<?php echo htmlspecialchars($page_title); ?>" >
+  <meta name="twitter:description" content="<?php echo htmlspecialchars($page_description); ?>" >
 
   <!-- Shared Component CSS (in order) -->
-  <link rel="stylesheet" href="../shared-components/base/tokens.css" />
-  <link rel="stylesheet" href="../shared-components/base/utilities.css" />
-  <link rel="stylesheet" href="../shared-components/base/typography.css" />
-  <link rel="stylesheet" href="../shared-components/base/containers.css" />
-  <link rel="stylesheet" href="../shared-components/navbar/navbar.css" />
-  <link rel="stylesheet" href="../shared-components/footer/footer.css" />
+  <link rel="stylesheet" href="../shared-components/base/tokens.css" >
+  <link rel="stylesheet" href="../shared-components/base/utilities.css" >
+  <link rel="stylesheet" href="../shared-components/base/typography.css" >
+  <link rel="stylesheet" href="../shared-components/base/containers.css" >
+  <link rel="stylesheet" href="../shared-components/navbar/navbar.css" >
+  <link rel="stylesheet" href="../shared-components/footer/footer.css" >
 
   <!-- SteepleStar-Specific CSS -->
-  <link rel="stylesheet" href="css/steeplestar-tokens.css" />
-  <link rel="stylesheet" href="css/steeplestar-style.css" />
+  <link rel="stylesheet" href="css/steeplestar-tokens.css" >
+  <link rel="stylesheet" href="css/steeplestar-style.css" >
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
