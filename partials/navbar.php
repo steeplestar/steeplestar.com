@@ -8,7 +8,7 @@
      Used by: All SteepleStar pages (index, projects, support, etc.)
      ============================================ -->
 
-<nav class="top-navbar" role="navigation" aria-label="Main navigation">
+<nav class="top-navbar" aria-label="Main navigation">
   <div class="navbar-content">
     <a href="index.php" class="nav-link">Home</a>
     <a href="projects.php" class="nav-link">Projects</a>
