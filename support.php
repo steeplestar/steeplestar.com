@@ -71,8 +71,8 @@ $page_url = canonical_url('support.php');
   <link rel="stylesheet" href="../shared-components/footer/footer.css">
   
   <!-- SteepleStar-Specific CSS -->
-  <link rel="stylesheet" href="css/steeplestar-tokens.css">
-  <link rel="stylesheet" href="css/steeplestar-style.css">
+  <link rel="stylesheet" href="<?php echo css_file('steeplestar-tokens'); ?>">
+  <link rel="stylesheet" href="<?php echo css_file('steeplestar-style'); ?>">
   
   <!-- PayPal Button Styles (moved from body for HTML5 validation) -->
   <style>

@@ -50,8 +50,8 @@ $page_url = canonical_url('legal.php');
   <link rel="stylesheet" href="../shared-components/footer/footer.css">
   
   <!-- SteepleStar-Specific CSS -->
-  <link rel="stylesheet" href="css/steeplestar-tokens.css">
-  <link rel="stylesheet" href="css/steeplestar-style.css">
+  <link rel="stylesheet" href="<?php echo css_file('steeplestar-tokens'); ?>">
+  <link rel="stylesheet" href="<?php echo css_file('steeplestar-style'); ?>">
 </head>
 
 <body>

@@ -96,9 +96,9 @@ $page_url = canonical_url('index.php');
   <link rel="stylesheet" href="../shared-components/navbar/navbar.css" >
   <link rel="stylesheet" href="../shared-components/footer/footer.css" >
 
-  <!-- SteepleStar-Specific CSS -->
-  <link rel="stylesheet" href="css/steeplestar-tokens.css" >
-  <link rel="stylesheet" href="css/steeplestar-style.css" >
+  <!-- SteepleStar-Specific CSS (automatic dev/prod switching) -->
+  <link rel="stylesheet" href="<?php echo css_file('steeplestar-tokens'); ?>" >
+  <link rel="stylesheet" href="<?php echo css_file('steeplestar-style'); ?>" >
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
