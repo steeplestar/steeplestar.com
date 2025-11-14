@@ -1,0 +1,12 @@
+# ============================================
+# STEEPLESTAR.COM - ROBOTS.TXT
+# Strategy: Maximum discoverability
+# Allow all crawlers (search engines + AI)
+# ============================================
+
+# Welcome all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://steeplestar.com/sitemap.xml
