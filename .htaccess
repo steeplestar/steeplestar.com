@@ -1,116 +1,35 @@
-# .htaccess — SteepleStar.com (Apache 2.4+ / DreamHost)
-# Canonical host: https://steeplestar.com
+# .htaccess — SteepleStar.com (TESTING VERSION - Minimal)
+# Temporary file to test page loading without any redirects
 
 # ─────────────────────────────────────────────────────────────
-# 0) Site-wide defaults
+# Site-wide defaults
 # ─────────────────────────────────────────────────────────────
 Options -Indexes
 
 # ─────────────────────────────────────────────────────────────
-# 1) Enable rewriting
-# ─────────────────────────────────────────────────────────────
-RewriteEngine On
-
-# ─────────────────────────────────────────────────────────────
-# 2) HTTPS + Canonical host
-# ─────────────────────────────────────────────────────────────
-# Force HTTPS
-RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# www → apex .com
-RewriteCond %{HTTP_HOST} ^www\.steeplestar\.com$ [NC]
-RewriteRule ^ https://steeplestar.com%{REQUEST_URI} [L,R=301]
-
-# ─────────────────────────────────────────────────────────────
-# 3) URL hygiene — strip tracking params
-# ─────────────────────────────────────────────────────────────
-# Remove one utm_* at a time
-RewriteCond %{QUERY_STRING} ^(.*?)(^|&)(utm_[^=&]+=[^&]*&?)(.*)$ [NC]
-RewriteRule ^ %{REQUEST_URI}?%1%4 [R=301,L,QSD]
-
-# Remove ref=
-RewriteCond %{QUERY_STRING} ^(.*?)(^|&)(ref=[^&]*&?)(.*)$ [NC]
-RewriteRule ^ %{REQUEST_URI}?%1%4 [R=301,L,QSD]
-
-# Remove print=
-RewriteCond %{QUERY_STRING} ^(.*?)(^|&)(print=[^&]*&?)(.*)$ [NC]
-RewriteRule ^ %{REQUEST_URI}?%1%4 [R=301,L,QSD]
-
-# ─────────────────────────────────────────────────────────────
-# 4) Canonical path rules
-# ─────────────────────────────────────────────────────────────
-# Trailing slash → no slash (skip real files/dirs)
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+?)/$ /$1 [L,R=301]
-
-# .php → pretty path (external redirect for canonical URL)
-RewriteCond %{THE_REQUEST} \s/+(.+)\.php[\s?] [NC]
-RewriteRule ^ %1 [L,R=301]
-
-# Pretty paths: /page → /page.php (internal rewrite if file exists)
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.php -f
-RewriteRule ^(.+)$ $1.php [L]
-
-# ─────────────────────────────────────────────────────────────
-# 5) Security headers
+# Security headers
 # ─────────────────────────────────────────────────────────────
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
-
-  # HSTS (6 months)
-  Header always set Strict-Transport-Security "max-age=15552000"
-
-  # CSP (permissive for PayPal + shared components)
-  Header set Content-Security-Policy "default-src 'self' https: data: blob:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval' https://www.paypal.com https://www.paypalobjects.com; style-src 'self' https: 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self'; connect-src 'self' https:; frame-src 'self' https://www.paypal.com; frame-ancestors 'self';"
 </IfModule>
 
 # ─────────────────────────────────────────────────────────────
-# 6) Compression
+# Compression
 # ─────────────────────────────────────────────────────────────
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
 </IfModule>
 
 # ─────────────────────────────────────────────────────────────
-# 7) Caching
-# ─────────────────────────────────────────────────────────────
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType text/css "access plus 7 days"
-  ExpiresByType application/javascript "access plus 7 days"
-  ExpiresByType image/svg+xml "access plus 30 days"
-  ExpiresByType image/webp "access plus 30 days"
-  ExpiresByType image/png "access plus 30 days"
-  ExpiresByType image/jpeg "access plus 30 days"
-  ExpiresByType image/jpg "access plus 30 days"
-</IfModule>
-
-# ─────────────────────────────────────────────────────────────
-# 8) Custom 404 page
+# Custom 404 page
 # ─────────────────────────────────────────────────────────────
 ErrorDocument 404 /404.php
 
 # ─────────────────────────────────────────────────────────────
-# 9) Block access to sensitive files
+# Block access to sensitive files
 # ─────────────────────────────────────────────────────────────
 <FilesMatch "^\.">
   Require all denied
 </FilesMatch>
-
-<Files "composer.json">
-  Require all denied
-</Files>
-
-<Files "composer.lock">
-  Require all denied
-</Files>
-
-<Files "package.json">
-  Require all denied
-</Files>

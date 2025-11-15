@@ -6,17 +6,13 @@
  * Project: Digital Assets Phase 4
  */
 
-// Load shared configuration
-require_once __DIR__ . '/../shared-components/base/config.php';
+// Load SteepleStar standalone configuration
+require_once __DIR__ . '/config.php';
 
-// Define IS_LOCALHOST if not already defined by config.php
-if (!defined('IS_LOCALHOST')) {
-  define('IS_LOCALHOST', 
-    $_SERVER['SERVER_NAME'] === 'localhost' || 
-    $_SERVER['SERVER_ADDR'] === '127.0.0.1' ||
-    $_SERVER['SERVER_ADDR'] === '::1'
-  );
-}
+// TEMPORARY DEBUG - Remove after confirming it works
+echo "<!-- DEBUG: ENV = " . SS_ENV . " -->\n";
+echo "<!-- DEBUG: BASE_URL = " . SS_BASE_URL . " -->\n";
+echo "<!-- DEBUG: SHARED_URL = " . SS_SHARED_URL . " -->\n";
 
 // Page-specific meta information
 $page_title = 'Legal & Privacy - SteepleStar LLC';
@@ -41,15 +37,15 @@ $page_url = canonical_url('legal.php');
   <!-- SteepleStar Head Icons & Meta Tags -->
   <?php include __DIR__ . '/partials/head-icons.php'; ?>
 
-  <!-- Shared Component CSS (in order) -->
-  <link rel="stylesheet" href="../shared-components/base/tokens.css">
-  <link rel="stylesheet" href="../shared-components/base/utilities.css">
-  <link rel="stylesheet" href="../shared-components/base/typography.css">
-  <link rel="stylesheet" href="../shared-components/base/containers.css">
-  <link rel="stylesheet" href="../shared-components/navbar/navbar.css">
-  <link rel="stylesheet" href="../shared-components/footer/footer.css">
+  <!-- Shared Component CSS (in order) - FIXED to use shared_asset() -->
+  <link rel="stylesheet" href="<?php echo shared_asset('base/tokens.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('base/utilities.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('base/typography.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('base/containers.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('navbar/navbar.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('footer/footer.css'); ?>">
   
-  <!-- SteepleStar-Specific CSS -->
+  <!-- SteepleStar-Specific CSS with automatic minification -->
   <link rel="stylesheet" href="<?php echo css_file('steeplestar-tokens'); ?>">
   <link rel="stylesheet" href="<?php echo css_file('steeplestar-style'); ?>">
 </head>
@@ -136,7 +132,7 @@ $page_url = canonical_url('legal.php');
     </main>
     
     <!-- Shared Footer -->
-    <?php include __DIR__ . '/../shared-components/footer/footer.php'; ?>
+    <?php include __DIR__ . '/shared-components/footer/footer.php'; ?>
     
   </div>
 </body>
