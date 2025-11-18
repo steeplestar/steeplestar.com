@@ -6,17 +6,8 @@
  * and automatic CSS minification switching
  */
 
-// Load shared configuration
-require_once __DIR__ . '/../shared-components/base/config.php';
-
-// Define IS_LOCALHOST if not already defined by config.php
-if (!defined('IS_LOCALHOST')) {
-  define('IS_LOCALHOST', 
-    $_SERVER['SERVER_NAME'] === 'localhost' || 
-    $_SERVER['SERVER_ADDR'] === '127.0.0.1' ||
-    $_SERVER['SERVER_ADDR'] === '::1'
-  );
-}
+// Load SteepleStar standalone configuration
+require_once __DIR__ . '/config.php';
 
 // Page-specific meta information
 $page_title = '404 - Page Not Found | SteepleStar';
@@ -46,16 +37,16 @@ http_response_code(404);
   <?php include __DIR__ . '/partials/head-icons.php'; ?>
   
   <!-- Shared Component CSS (in order) -->
-  <link rel="stylesheet" href="../shared-components/base/tokens.css">
-  <link rel="stylesheet" href="../shared-components/base/utilities.css">
-  <link rel="stylesheet" href="../shared-components/base/typography.css">
-  <link rel="stylesheet" href="../shared-components/base/containers.css">
-  <link rel="stylesheet" href="../shared-components/navbar/navbar.css">
-  <link rel="stylesheet" href="../shared-components/footer/footer.css">
+  <link rel="stylesheet" href="<?php echo shared_asset('base/tokens.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('base/utilities.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('base/typography.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('base/containers.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('navbar/navbar.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('footer/footer.css'); ?>">
   
   <!-- SteepleStar-Specific CSS with automatic minification -->
-  <link rel="stylesheet" href="css/<?php echo css_file('steeplestar-tokens'); ?>">
-  <link rel="stylesheet" href="css/<?php echo css_file('steeplestar-style'); ?>">
+  <link rel="stylesheet" href="<?php echo css_file('steeplestar-tokens'); ?>">
+  <link rel="stylesheet" href="<?php echo css_file('steeplestar-style'); ?>">
 </head>
 
 <body>
@@ -125,7 +116,7 @@ http_response_code(404);
     </main>
     
     <!-- Shared Footer -->
-    <?php include __DIR__ . '/../shared-components/footer/footer.php'; ?>
+    <?php include __DIR__ . '/shared-components/footer/footer.php'; ?>
     
   </div>
   

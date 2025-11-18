@@ -64,7 +64,7 @@ $page_url = canonical_url('legal.php');
         <h1>Legal & Privacy</h1>
       </section>
 
-      <!-- Main content panel -->
+            <!-- Main content panel -->
       <article class="text-content-panel section-spacing" role="document" aria-label="Legal and Privacy Information">
 
         <section>
@@ -75,55 +75,74 @@ $page_url = canonical_url('legal.php');
         </section>
 
         <section>
-          <h2>Privacy & Data</h2>
-          <ul>
-            <li>We do not collect personal information through this website.</li>
-            <li>We do not know who you are: no accounts and no personal identifiers.</li>
-            <li>If you make a financial contribution via PayPal, your payment is processed by PayPal under their privacy policy.</li>
-            <li>We do not sell, share, or distribute any information about visitors.</li>
-          </ul>
+          <h2>Privacy &amp; Data</h2>
+          <p>
+            We try to keep data collection to the bare minimum.
+          </p>
+          <p>
+            Like most websites, our hosting environment automatically creates basic server logs when you visit. These logs
+            can include your IP address, the pages requested, and general browser or device information. They exist mainly
+            so the site can function, stay secure, and be debugged when something breaks. We do not use this information to
+            try to figure out who you are, and we do not sell or trade it.
+          </p>
+          <p>
+            Payments processed by PayPal are subject to PayPal’s own terms and privacy practices, which are outside of our
+            control. You can read more in the
+            <a href="https://www.paypal.com/us/legalhub/paypal/privacy-full"
+               target="_blank" rel="noopener noreferrer">PayPal Privacy Statement</a>.
+          </p>
         </section>
 
         <section>
-          <h2>Financial Contributions</h2>
+          <h2>Contributions</h2>
           <p>
-            We accept voluntary financial contributions via PayPal to support our projects.
+            We accept voluntary financial contributions via PayPal to support our projects. SteepleStar LLC is a for-profit
+            company, and contributions are not tax-deductible.
           </p>
-          <ul>
-            <li>SteepleStar LLC is a for-profit company. Contributions are not tax-deductible.</li>
-            <li>All contributions are voluntary, non-refundable, and create no obligations on our part.</li>
-            <li>You receive no goods, services, equity, or rewards. This is not an investment.</li>
-          </ul>
+          <p>
+            Contributions are non-refundable and do not create any obligations on our part. You do not receive goods,
+            services, equity, or rewards in exchange for a contribution. This is not an investment.
+          </p>
         </section>
 
         <section>
           <h2>Legal Stuff</h2>
-          <ul>
-            <li>The site is provided "as is," without warranties.</li>
-            <li>We are not liable for losses or damages arising from your use of the site. Our maximum liability for anything is $100.</li>
-            <li>Any legal disputes will be handled in Minnesota courts under Minnesota law (that's where our company is).</li>
-          </ul>
+          <p>
+            This site is provided "as is," without warranties of any kind, express or implied. To the fullest extent allowed
+            by law, we are not liable for losses or damages arising from your use of the site. Our maximum liability for
+            anything related to the site is $100.
+          </p>
+          <p>
+            Any legal disputes will be handled in Minnesota courts under Minnesota law (that's where our company is).
+          </p>
         </section>
 
         <section>
           <h2>Our Projects</h2>
           <p>
-            SteepleStar operates multiple digital products. Each project has its own terms and privacy policies. Please review the legal information for each project you use.
+            SteepleStar operates multiple digital products, and each project may have its own specific terms and privacy
+            details. When you use a particular project, please review the legal or privacy information provided for that
+            project, as it may describe additional practices beyond this general page.
           </p>
         </section>
 
         <section>
           <h2>Changes</h2>
-          <p>We may update these terms at any time. Continued use means acceptance.</p>
+          <p>
+            We may update these terms at any time. Continued use of this site after changes are posted means you accept the
+            updated terms.
+          </p>
         </section>
 
         <section>
           <h2>Contact</h2>
-          <p>SteepleStar LLC – <a href="mailto:contact@steeplestar.com">contact@steeplestar.com</a></p>
+          <p>
+            SteepleStar LLC – <a href="mailto:contact@steeplestar.com">contact@steeplestar.com</a>
+          </p>
         </section>
 
       </article>
-      
+     
       <!-- Back to Home -->
       <div class="text-content-panel">
         <p class="text-center"><a href="index.php">← Back to Home</a></p>
