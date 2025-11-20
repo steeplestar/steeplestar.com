@@ -7,33 +7,15 @@
  * 
  * IMPORTANT: This page includes legal disclaimers about for-profit contributions.
  * Contributions are NOT tax-deductible and create no obligations.
- * 
- * This page uses shared-components from Zeitgeist Cloud:
- * - config.php (environment detection)
- * - head-icons.php (meta tags, favicons)
- * - footer.php (footer with logo)
- * - All 6 shared CSS files (including navbar.css for styling)
- * 
- * Plus SteepleStar-specific:
- * - partials/navbar.php (navigation with SteepleStar links)
  */
 
-// Load shared configuration
-require_once __DIR__ . '/../shared-components/base/config.php';
-
-// Define IS_LOCALHOST if not already defined by config.php
-if (!defined('IS_LOCALHOST')) {
-  define('IS_LOCALHOST', 
-    $_SERVER['SERVER_NAME'] === 'localhost' || 
-    $_SERVER['SERVER_ADDR'] === '127.0.0.1' ||
-    $_SERVER['SERVER_ADDR'] === '::1'
-  );
-}
+// Load SteepleStar standalone configuration
+require_once __DIR__ . '/config.php';
 
 // Page-specific meta information
 $page_title = 'Support SteepleStar - Independent Digital Products';
 $page_description = 'Support independent digital product development. Help keep SteepleStar projects running.';
-$page_url = canonical_url('support.php');
+$page_url = canonical_url('support');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,15 +44,15 @@ $page_url = canonical_url('support.php');
   <meta name="twitter:title" content="<?php echo htmlspecialchars($page_title); ?>">
   <meta name="twitter:description" content="<?php echo htmlspecialchars($page_description); ?>">
   
-  <!-- Shared Component CSS (in order) -->
-  <link rel="stylesheet" href="../shared-components/base/tokens.css">
-  <link rel="stylesheet" href="../shared-components/base/utilities.css">
-  <link rel="stylesheet" href="../shared-components/base/typography.css">
-  <link rel="stylesheet" href="../shared-components/base/containers.css">
-  <link rel="stylesheet" href="../shared-components/navbar/navbar.css">
-  <link rel="stylesheet" href="../shared-components/footer/footer.css">
+  <!-- Shared Component CSS (in order) - FIXED to use shared_asset() -->
+  <link rel="stylesheet" href="<?php echo shared_asset('base/tokens.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('base/utilities.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('base/typography.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('base/containers.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('navbar/navbar.css'); ?>">
+  <link rel="stylesheet" href="<?php echo shared_asset('footer/footer.css'); ?>">
   
-  <!-- SteepleStar-Specific CSS -->
+  <!-- SteepleStar-Specific CSS with automatic minification -->
   <link rel="stylesheet" href="<?php echo css_file('steeplestar-tokens'); ?>">
   <link rel="stylesheet" href="<?php echo css_file('steeplestar-style'); ?>">
   
@@ -163,7 +145,6 @@ $page_url = canonical_url('support.php');
         </div>
         
         <!-- PayPal Button Container -->
-        <!-- VALIDATION FIXES: Styles moved to head, quotes added, trailing slashes removed, section changed to div -->
         <div class="payment-container">
           
           <!-- $5 Contribution -->
@@ -213,7 +194,7 @@ $page_url = canonical_url('support.php');
     </main>
     
     <!-- Shared Footer -->
-    <?php include __DIR__ . '/../shared-components/footer/footer.php'; ?>
+    <?php include __DIR__ . '/shared-components/footer/footer.php'; ?>
     
   </div>
 </body>
