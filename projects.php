@@ -5,10 +5,7 @@
  * Purpose: Showcase current and future digital products
  * Project: Digital Assets Phase 4
  * 
- * DEPLOYMENT NOTE:
- * When Zeitgeist Cloud goes live, change line 25:
- * $zeitgeist_deployed = false;  →  $zeitgeist_deployed = true;
- * This will make project links point to the live site.
+ * ✅ SIMPLIFIED - Zeitgeist Cloud link always points to production
  * 
  * This page uses shared-components from Zeitgeist Cloud:
  * - config.php (environment detection)
@@ -23,29 +20,8 @@
 // Load shared configuration
 require_once __DIR__ . '/../shared-components/base/config.php';
 
-// Define IS_LOCALHOST if not already defined by config.php
-if (!defined('IS_LOCALHOST')) {
-  define('IS_LOCALHOST', 
-    $_SERVER['SERVER_NAME'] === 'localhost' || 
-    $_SERVER['SERVER_ADDR'] === '127.0.0.1' ||
-    $_SERVER['SERVER_ADDR'] === '::1'
-  );
-}
-
-// Cross-project link: Zeitgeist Cloud
-// Set this to TRUE when Zeitgeist Cloud is deployed to production
-$zeitgeist_deployed = false;
-
-if (IS_LOCALHOST) {
-  $zeitgeist_url = 'http://localhost/WordCloudProject/';
-  $zeitgeist_available = true;
-} elseif ($zeitgeist_deployed) {
-  $zeitgeist_url = 'https://zeitgeist.cloud';
-  $zeitgeist_available = true;
-} else {
-  $zeitgeist_url = '#';
-  $zeitgeist_available = false;
-}
+// Zeitgeist Cloud link - ALWAYS points to production
+$zeitgeist_url = 'https://zeitgeistcloud.com';
 
 // Page-specific meta information
 $page_title = 'Our Projects - SteepleStar Digital Products';
@@ -88,8 +64,8 @@ $page_url = canonical_url('projects.php');
   <link rel="stylesheet" href="../shared-components/footer/footer.css">
   
   <!-- SteepleStar-Specific CSS -->
-  <link rel="stylesheet" href="<?php echo css_file('steeplestar-tokens'); ?>">
-  <link rel="stylesheet" href="<?php echo css_file('steeplestar-style'); ?>">
+  <link rel="stylesheet" href="css/steeplestar-tokens.css">
+  <link rel="stylesheet" href="css/steeplestar-style.css">
   
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -132,7 +108,7 @@ $page_url = canonical_url('projects.php');
         
         <!-- Project 1: Zeitgeist Cloud -->
         <div class="project-card">
-          <span class="project-status">Coming Soon</span>
+          <span class="project-status">In Beta Testing</span>
           <h3>Zeitgeist Cloud</h3>
           <p>A real-time community word cloud. Submit a word, watch it grow as others submit the same one. See what's on everyone's mind right now.</p>
           
@@ -140,11 +116,7 @@ $page_url = canonical_url('projects.php');
             <img src="images/zeitgeist-preview.jpg" alt="Zeitgeist Cloud word cloud visualization" loading="lazy">
           </div>
           
-          <?php if ($zeitgeist_available): ?>
-            <a href="<?php echo htmlspecialchars($zeitgeist_url); ?>" class="btn-zeitgeist" target="_blank" rel="noopener noreferrer" style="margin-top: 1rem;">Visit Zeitgeist Cloud</a>
-          <?php else: ?>
-            <span class="btn-zeitgeist" style="opacity: 0.6; cursor: not-allowed; margin-top: 1rem;" aria-disabled="true" title="Coming Soon">Zeitgeist Cloud (Coming Soon)</span>
-          <?php endif; ?>
+          <a href="<?php echo htmlspecialchars($zeitgeist_url); ?>" class="btn-zeitgeist" target="_blank" rel="noopener noreferrer" style="margin-top: 1rem;">Visit Zeitgeist Cloud</a>
         </div>
         
         <!-- Project 2: Future Project (Placeholder) -->

@@ -5,9 +5,7 @@
  * Purpose: Company introduction and welcome page
  * Project: Digital Assets Phase 4
  *
- * DEPLOYMENT NOTE:
- * When Zeitgeist Cloud goes live, set $zeitgeist_deployed = true;
- * (or set environment variable ZEITGEIST_DEPLOYED=true)
+ * ✅ SIMPLIFIED - Zeitgeist Cloud link always points to production
  *
  * This page uses shared-components from Zeitgeist Cloud:
  * - config.php (environment detection)
@@ -22,39 +20,8 @@
 // Load shared configuration
 require_once __DIR__ . '/../shared-components/base/config.php';
 
-// Define IS_LOCALHOST if not already defined by config.php
-if (!defined('IS_LOCALHOST')) {
-  $serverName = $_SERVER['SERVER_NAME'] ?? '';
-  $serverAddr = $_SERVER['SERVER_ADDR'] ?? '';
-  $remoteAddr = $_SERVER['REMOTE_ADDR'] ?? '';
-  define('IS_LOCALHOST',
-    $serverName === 'localhost' ||
-    in_array($serverAddr, ['127.0.0.1', '::1'], true) ||
-    in_array($remoteAddr, ['127.0.0.1', '::1'], true)
-  );
-}
-
-// Cross-project link: Zeitgeist Cloud
-// Toggle to TRUE when Zeitgeist Cloud is deployed to production
-$zeitgeist_deployed = (getenv('ZEITGEIST_DEPLOYED') === 'true') ? true : false;
-
-// Automatically works in all deployment scenarios:
-// - Both in localhost: links to localhost version
-// - SteepleStar live, Zeitgeist pending: shows "Coming Soon"
-// - Both live: links to production version
-if (IS_LOCALHOST) {
-  // In WAMP: always link to local Zeitgeist
-  $zeitgeist_url = 'http://localhost/WordCloudProject/';
-  $zeitgeist_available = true;
-} elseif ($zeitgeist_deployed) {
-  // In production AND Zeitgeist is deployed: link to live site (canonical .com)
-  $zeitgeist_url = 'https://zeitgeistcloud.com';
-  $zeitgeist_available = true;
-} else {
-  // In production BUT Zeitgeist not deployed yet: disabled link
-  $zeitgeist_url = '#';
-  $zeitgeist_available = false;
-}
+// Zeitgeist Cloud link - ALWAYS points to production
+$zeitgeist_url = 'https://zeitgeistcloud.com';
 
 // Page-specific meta information
 $page_title = 'SteepleStar LLC - Independent Digital Products';
